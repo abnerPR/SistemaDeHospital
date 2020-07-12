@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.EspecialidadController">
+   <children>
+      <ImageView fitHeight="339.0" fitWidth="575.0" layoutY="61.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Especialidades.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="132.0" layoutY="20.0" text="Especialidades" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="70.0" layoutX="444.0" onMouseClicked="#menuPrincipal" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="102.0" text="Nombre de la Especialidad" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreEspecialidad" editable="false" layoutX="197.0" layoutY="98.0" prefHeight="25.0" prefWidth="292.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblEspecialidades" layoutX="22.0" layoutY="191.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="189.0" prefWidth="468.0">
+         <columns>
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="190.0" text="Códigos" />
+            <TableColumn fx:id="colEspecialidades" prefWidth="277.0" text="Especialidades" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="24.0" layoutY="149.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="269.0" layoutY="149.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="390.0" layoutY="149.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

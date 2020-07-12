@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.PacienteController">
+   <children>
+      <ImageView fitHeight="659.0" fitWidth="933.0" layoutY="65.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Pacientes.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="361.0" layoutY="14.0" text="Pacientes" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="79.0" text="DPI" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="109.0" text="Apellidos" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="142.0" text="Nombres" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="172.0" text="Fecha de Nacimiento" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="204.0" text="Edad" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="439.0" layoutY="202.0" text="Dirección" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="235.0" text="Ocupación" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="439.0" layoutY="233.0" text="Sexo" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDpi" editable="false" layoutX="161.0" layoutY="75.0" prefHeight="25.0" prefWidth="214.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="161.0" layoutY="105.0" prefHeight="25.0" prefWidth="612.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtNombres" editable="false" layoutX="161.0" layoutY="138.0" prefHeight="25.0" prefWidth="612.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtEdad" editable="false" layoutX="161.0" layoutY="200.0" prefHeight="25.0" prefWidth="214.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="161.0" layoutY="231.0" prefHeight="25.0" prefWidth="214.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="521.0" layoutY="197.0" prefHeight="25.0" prefWidth="252.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSexo" editable="false" layoutX="521.0" layoutY="228.0" prefHeight="25.0" prefWidth="252.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblPacientes" layoutX="9.0" layoutY="273.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="231.0" prefWidth="922.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="56.0" text="Código" />
+            <TableColumn fx:id="colDpi" prefWidth="100.0" text="DPI" />
+            <TableColumn fx:id="colApellidos" prefWidth="163.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="160.0" text="Nombres" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="125.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="44.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="130.0" text="Dirección" />
+            <TableColumn fx:id="colOcupacion" prefWidth="86.0" text="Ocupación" />
+            <TableColumn fx:id="colSexo" prefWidth="56.0" text="Sexo" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="827.0" layoutY="110.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="827.0" layoutY="140.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="827.0" layoutY="169.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="827.0" layoutY="200.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="64.0" fitWidth="76.0" layoutX="869.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencia" text="Contacto Urgencia" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane layoutX="161.0" layoutY="149.0">
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="grpFecha" disable="true" layoutX="161.0" layoutY="167.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

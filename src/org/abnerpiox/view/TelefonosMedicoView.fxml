@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.TelefonosMedicoController">
+   <children>
+      <ImageView fitHeight="402.0" fitWidth="552.0" layoutX="2.0" layoutY="65.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TelelfonoMedico.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="141.0" layoutY="16.0" text="Teléfono Médico" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="70.0" layoutX="489.0" onMouseClicked="#ventanaMedicos" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="92.0" text="Teléfono Personal" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="122.0" text="Teléfono de Trabajo" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="151.0" text="Código Médico" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="156.0" layoutY="88.0" prefHeight="25.0" prefWidth="187.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtTelefonoTrabajo" editable="false" layoutX="156.0" layoutY="118.0" prefHeight="25.0" prefWidth="187.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblTelefonosMedicos" layoutX="16.0" layoutY="228.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="189.0" prefWidth="524.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTelefonoMedico" prefWidth="113.0" text="Códigos" />
+            <TableColumn fx:id="colTelefonoPersonal" prefWidth="164.0" text="Teléfonos Personales" />
+            <TableColumn fx:id="colTelefonoTrabajo" prefWidth="141.0" text="Teléfonos de Trabajo" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="105.0" text="Código Médico" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="156.0" layoutY="147.0" prefHeight="25.0" prefWidth="82.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <Button fx:id="btnReporte" layoutX="440.0" layoutY="175.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="440.0" layoutY="144.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="440.0" layoutY="115.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="440.0" layoutY="85.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

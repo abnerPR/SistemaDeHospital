@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.MedicoEspecialidadController">
+   <children>
+      <ImageView fitHeight="352.0" fitWidth="624.0" layoutY="62.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medicoEspecialidad.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="17.0" text="Médico Especialidad" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="61.0" layoutX="563.0" onMouseClicked="#menuPrincipal" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="55.0" layoutY="88.0" text="Código Médico" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="125.0" text="Código Especialidad" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="163.0" text="Código Horario" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="467.0" layoutY="76.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="467.0" layoutY="109.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="53.0" layoutY="211.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="159.0" prefWidth="512.0">
+         <columns>
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="173.0" text="Código Médico Especialidad" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="99.0" text="Código Medico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="121.0" text="Código Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="121.0" text="Código Horario" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="192.0" layoutY="85.0" prefHeight="25.0" prefWidth="174.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" layoutX="192.0" layoutY="121.0" prefHeight="25.0" prefWidth="174.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" layoutX="192.0" layoutY="159.0" prefHeight="25.0" prefWidth="174.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+   </children>
+</AnchorPane>

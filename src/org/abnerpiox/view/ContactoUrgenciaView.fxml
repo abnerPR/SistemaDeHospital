@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="364.0" fitWidth="609.0" layoutY="61.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ContactoUrgencia.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="120.0" layoutY="14.0" text="Contacto de Urgencia" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="95.0" text="Nombres" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="131.0" text="Apellidos" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="168.0" text="Número de Contacto" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="205.0" text="Código Paciente" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="151.0" layoutY="90.0" prefHeight="25.0" prefWidth="307.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="151.0" layoutY="126.0" prefHeight="25.0" prefWidth="307.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="151.0" layoutY="163.0" prefHeight="25.0" prefWidth="240.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="151.0" layoutY="200.0" prefHeight="25.0" prefWidth="82.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblContactosUrgencias" layoutX="14.0" layoutY="243.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="165.0" prefWidth="589.0">
+         <columns>
+            <TableColumn fx:id="colCodigoContactoUrgencia" prefWidth="64.0" text="Códigos" />
+            <TableColumn fx:id="colNombres" prefWidth="153.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="149.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" prefWidth="122.0" text="Número de Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="96.0" text="Código Paciente" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="548.0" onMouseClicked="#ventanaPacientes" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="495.0" layoutY="89.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="495.0" layoutY="119.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="495.0" layoutY="148.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="495.0" layoutY="179.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

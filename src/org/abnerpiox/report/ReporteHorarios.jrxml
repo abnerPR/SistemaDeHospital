@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteHorarios" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e46c2c7f-f765-43ee-ac30-d798d12b0634">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarHorarios]]>
+	</queryString>
+	<field name="codigoHorario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioInicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="-1" y="0" width="555" height="802" uuid="28e43392-19e5-469c-9895-c30a21bc022d"/>
+				<imageExpression><![CDATA["C:\\Users\\abpio\\OneDrive\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\fondo reporteMedicos.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="0" width="386" height="52" forecolor="#00CCCC" uuid="54c8496e-1b0e-45d5-8c40-3d6e977ef62d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="52" width="184" height="20" forecolor="#001F9F" uuid="0a6e3b50-e66b-480f-aff1-19960642e6db"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo importante   ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="76" height="78" uuid="cd049933-cecb-4f53-aca8-3edcb207a494"/>
+				<imageExpression><![CDATA["C:\\Users\\abpio\\OneDrive\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="122" y="0" width="311" height="23" forecolor="#001F9F" uuid="332b862f-22e3-42ba-8acc-fadae524c23f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE HORARIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="68" height="34" forecolor="#059292" uuid="937e24ac-7374-479f-b258-8c5fe72299b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código Horario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="77" height="34" forecolor="#059292" uuid="eb177cc2-b8a1-4a64-8a6c-0817ce523758"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora de Inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="0" width="82" height="34" forecolor="#059292" uuid="69a41fe5-1b19-498e-ada2-c10dfec9cf8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora de Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="65" height="34" forecolor="#059292" uuid="78e80680-7276-4874-aa32-4eaca7f1c752"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="0" width="69" height="34" forecolor="#059292" uuid="c67f2cb5-5f92-4710-95dd-3cae694783b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Martes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="0" width="69" height="34" forecolor="#059292" uuid="6aa556e3-2ce4-4b87-93f7-b15d01169add"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Miercoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="0" width="64" height="34" forecolor="#059292" uuid="d8a66781-f2c9-457b-82c5-54e30b4965df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Juevves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="0" width="59" height="34" forecolor="#059292" uuid="d687ea98-90f4-4a1c-b66d-3ef0381fc329"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Viernes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="34" width="555" height="1" forecolor="#001F9F" uuid="68e9dc09-b7fa-4689-be4f-d3640fdb7fd9"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="69" height="20" uuid="08565b9e-0690-40c3-83ee-f4e84ae75565"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoHorario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="77" height="20" uuid="e319873b-8516-4306-80f5-a51158f912f1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{horarioInicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="0" width="82" height="20" uuid="e73d724a-0553-4525-903e-8ace1a5310d8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="65" height="20" uuid="da114e88-9184-4fd8-8fd6-9a3b8473bf8e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="0" width="69" height="20" uuid="8c0eba66-d201-468b-a142-7de62984cec8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{martes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="0" width="69" height="20" uuid="cd216349-7242-4e49-a1f8-21cfafa65e73"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{miercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="0" width="64" height="20" uuid="e3eb45db-ca5b-46c4-83c5-47f245e5c799"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jueves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="57" height="20" uuid="2d186703-a77e-48e4-a76a-664917b686da"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{viernes}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="20" width="555" height="1" forecolor="#001F9F" uuid="70031bf6-fb59-45ee-a5dd-5d1aaf5dc709"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="318" y="34" width="100" height="20" uuid="b97d7a61-2fc1-43f2-94c6-ed527fc6c4e6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="418" y="34" width="77" height="20" uuid="ed88d873-e57a-445f-9ccb-4479b7600866"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="495" y="34" width="59" height="20" uuid="1729ebc0-1a21-4fc9-8712-d9c6ab9db393"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

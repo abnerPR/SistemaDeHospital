@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCargos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="453b627a-4af2-4a9e-b9b4-79b8a4dd7135">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarCargos]]>
+	</queryString>
+	<field name="codigoCargo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="-2" y="0" width="555" height="802" uuid="eaea37f5-5a8c-41a8-8f7f-ec0c532ec9aa"/>
+				<imageExpression><![CDATA["C:\\Users\\abpio\\OneDrive\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\fondo reporteMedicos.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="123" y="0" width="386" height="52" forecolor="#00CCCC" uuid="492cae2e-9d4f-486f-ad1f-00ce444c601c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="76" height="78" uuid="cf7e4673-d41e-4699-92f7-20649ad493f3"/>
+				<imageExpression><![CDATA["C:\\Users\\abpio\\OneDrive\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="325" y="52" width="184" height="20" forecolor="#001F9F" uuid="055abda4-8423-42ea-ae16-dbe2b1133661"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo importante   ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="123" y="0" width="311" height="23" forecolor="#001F9F" uuid="3e22830d-829a-43b6-8ffc-90d007618212"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CARGOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="123" y="0" width="118" height="34" forecolor="#059292" uuid="4ca16df5-e86d-4b71-95f5-de2900d47897"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código del Cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="0" width="135" height="34" forecolor="#059292" uuid="a37c304e-5ec7-49c8-b8bf-38d433cbc8b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Cargo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" forecolor="#001F9F" uuid="9dabf0a3-9541-4782-98b7-ff9cbbd917c0"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="123" y="0" width="118" height="20" uuid="0c842f5e-51c9-4eb6-ad25-3f00eb89cb19"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="0" width="135" height="20" uuid="6335bc34-5722-4d1b-a7b4-887bc91a033a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#001F9F" uuid="266df2ed-bd1a-4d69-907f-23ded52e3cd5"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="417" y="34" width="77" height="20" uuid="ad986759-e184-4a0d-b286-f577c2ed0876"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="315" y="34" width="100" height="20" uuid="03acab8f-38d6-4009-883f-dfafc169a024"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="494" y="34" width="59" height="20" uuid="3c135479-e831-4c94-9178-934f565f4717"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

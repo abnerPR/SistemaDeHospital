@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAreas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5279365-e4b2-4566-b5f6-c65c0643bc23">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAreas]]>
+	</queryString>
+	<field name="codigoArea" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="802" uuid="d842e8c0-072e-4c05-affa-e0cc5f34654b"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\fondo reporteMedicos.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="0" width="386" height="52" forecolor="#00CCCC" uuid="b317aea3-1ea3-4834-8114-f179f9f147cd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="52" width="184" height="20" forecolor="#001F9F" uuid="429c1c8f-4102-4461-a8fe-7daf4a77304a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo importante   ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="88" height="79" uuid="d50e443b-51d5-479f-bac0-51c1e5e5dec1"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018137\\src\\org\\abnerpiox\\images\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="0" width="311" height="23" forecolor="#001F9F" uuid="b82c802e-f861-4c5b-9c12-69882bc711c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ÁREAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="109" y="0" width="110" height="34" forecolor="#059292" uuid="95e4844f-693b-47c0-b447-921955856a1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código del Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="143" height="34" forecolor="#059292" uuid="97c39304-3026-4b12-a3c0-6012cee79bdd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Área]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" forecolor="#001F9F" uuid="362601ba-1cb1-4c96-8ca8-9d3f97e6efb1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="109" y="0" width="110" height="20" uuid="a0738f5b-f86d-4ca4-9ba5-6c77051b1c3e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoArea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="143" height="20" uuid="b8807b93-f64e-4c0c-be17-852f1ff8774e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreArea}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#001F9F" uuid="73452d84-a943-4df8-a59b-581d919169ed"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="317" y="34" width="100" height="20" uuid="d6075830-b3fd-46b6-8cb6-12db403e3473"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="417" y="34" width="77" height="20" uuid="44a3e3a3-edb6-4c5d-9a50-03df40dccbcd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="494" y="34" width="59" height="20" uuid="57ee6f9c-8fa1-4c96-88e7-7720d7c7eb12"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

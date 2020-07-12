@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.ResponsableTurnoController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="644.0" layoutY="82.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ResponsableTurno.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="132.0" layoutY="37.0" text="Responsable del Turno" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreResponsable" editable="false" layoutX="169.0" layoutY="109.0" prefHeight="25.0" prefWidth="275.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidoResponsable" editable="false" layoutX="169.0" layoutY="140.0" prefHeight="25.0" prefWidth="275.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="169.0" layoutY="172.0" prefHeight="25.0" prefWidth="151.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="8.0" layoutY="113.0" text="Nombre del Responsable" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="144.0" text="Apellidos del Responsable" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="177.0" text="Telefono Personal" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="496.0" layoutY="109.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="496.0" layoutY="140.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="496.0" layoutY="172.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="496.0" layoutY="205.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TableView fx:id="tblResponsableTurno" layoutX="11.0" layoutY="269.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="207.0" prefWidth="623.0">
+         <columns>
+            <TableColumn fx:id="colCodigoResponsable" text="Códigos" />
+            <TableColumn fx:id="colNombreResponsable" prefWidth="135.0" text="Nombre Responsable" />
+            <TableColumn fx:id="colApellidoResponsable" prefWidth="135.0" text="Apellido Responsable" />
+            <TableColumn fx:id="colTelefonoPersonal" prefWidth="113.0" text="Teléfono Personal" />
+            <TableColumn fx:id="colCodigoArea" prefWidth="77.0" text="Código Area" />
+            <TableColumn fx:id="colCodigoCargo" prefWidth="82.0" text="Código Cargo" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="7.0" layoutY="206.0" text="Código Área" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoArea" disable="true" layoutX="169.0" layoutY="201.0" prefHeight="25.0" prefWidth="82.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoCargo" disable="true" layoutX="169.0" layoutY="232.0" prefHeight="25.0" prefWidth="82.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <Label layoutX="7.0" layoutY="236.0" text="Código Cargo" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="88.0" layoutX="564.0" onMouseClicked="#menuPrincipal" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

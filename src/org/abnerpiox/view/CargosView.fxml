@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.abnerpiox.controller.CargoController">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="499.0" layoutY="61.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Cargos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="178.0" layoutY="14.0" text="Cargos" textFill="#00beff">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="70.0" layoutX="435.0" layoutY="4.0" onMouseClicked="#menuPrincipal" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doctor5.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="34.0" layoutY="112.0" text="Nombre del Cargo" textFill="#000bff">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreCargo" editable="false" layoutX="161.0" layoutY="108.0" prefHeight="25.0" prefWidth="323.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="btnReporte" layoutX="386.0" layoutY="159.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="98.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="265.0" layoutY="159.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="98.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="139.0" layoutY="159.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="98.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="98.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblCargos" layoutX="18.0" layoutY="200.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="189.0" prefWidth="468.0">
+         <columns>
+            <TableColumn fx:id="colCodigoCargo" prefWidth="229.0" text="Códigos" />
+            <TableColumn fx:id="colCargos" prefWidth="237.0" text="Cargos" />
+         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>

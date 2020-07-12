@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFinal" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8bbdadb3-efed-4bf2-9d4e-e785c5de0be8">
+	<property name="ireport.zoom" value="0.9090909090909092"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codMedico" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteFinal($P{codMedico})]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TurnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePaciente" class="java.lang.String"/>
+	<field name="apellidoPaciente" class="java.lang.String"/>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreResponsable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosResponsable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="420" y="52" width="184" height="20" forecolor="#001F9F" uuid="0886560a-2821-48d6-945a-3e918a54b5c6"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo importante   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="386" height="52" forecolor="#00CCCC" uuid="10701b8d-5cc7-434e-b824-0ad11d75bc84"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="692" y="32" width="110" height="40" forecolor="#FF0000" uuid="47d2844b-420e-470b-ac7d-fc73e5412b03"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="692" y="0" width="110" height="34" forecolor="#FF0000" uuid="f88cf995-353f-4e2c-846a-09045aa8bffb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[No. de Registro]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="254" y="0" width="311" height="23" forecolor="#001F9F" uuid="7a22f498-bcfb-4720-b86d-a445e6050945"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE FINAL]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="102" height="34" forecolor="#059292" uuid="db4f69e7-d2ee-4e93-8703-781a7ee50255"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Licencia Médica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="111" height="34" forecolor="#059292" uuid="cac6926d-0d44-4ffe-bbf9-538fd7345340"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Apellidos del Médico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="34" width="63" height="34" forecolor="#059292" uuid="ae4b1a8b-91b0-411a-a9a3-d10ef7f710e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="34" width="54" height="34" forecolor="#059292" uuid="ef0307ec-e792-4975-9686-5d4989568472"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="34" width="64" height="34" forecolor="#059292" uuid="9dffd841-cfff-47c4-9135-0ac8f6dd74a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Turno Maximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="34" width="50" height="34" forecolor="#059292" uuid="2c1ae2f5-789e-4b61-bc5b-55c87f6c31aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="34" width="54" height="34" forecolor="#059292" uuid="c0858dfd-b1a4-4fc6-aded-aca905b769e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Martes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="34" width="55" height="34" forecolor="#059292" uuid="f8223e2a-03cb-427d-a7d5-d5df268064f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Miercoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="33" width="67" height="34" forecolor="#059292" uuid="556ead74-bdb6-4743-b4d5-ca1af7dc2151"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Jueves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="34" width="55" height="34" forecolor="#059292" uuid="67a7c4cc-2c46-4c5f-a1f6-42726ca900fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Viernes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="631" y="0" width="76" height="34" forecolor="#059292" uuid="c1aebee4-48a0-448e-9ee9-572b58c3c6ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Especialidad]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="67" width="799" height="1" forecolor="#001F9F" uuid="684e305b-93e2-4056-98ac-8b396a0a18ad"/>
+			</line>
+			<staticText>
+				<reportElement x="727" y="33" width="72" height="34" forecolor="#059292" uuid="6469ce64-026e-43c3-8a51-71904f202b22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Numero Contacto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="527" y="0" width="104" height="34" uuid="b557be58-f2ee-4a77-9372-873ffa32b269"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="707" y="0" width="92" height="34" uuid="6701df89-8ddc-46e3-b9c7-672eaf6868e4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEspecialidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="34" width="128" height="34" forecolor="#059292" uuid="411aac31-264b-4e64-826b-d662cff9551a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="593" y="34" width="134" height="34" forecolor="#059292" uuid="e8d930f0-c9c2-4da4-88f2-bb23c39d9964"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Apellidos del Paciente]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="288" y="0" width="128" height="34" uuid="c0d95f70-7244-4956-b153-f514d2f8846d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="83" height="34" uuid="c428106c-b399-46ca-99e7-87a7bac6e8c2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="185" y="0" width="103" height="34" forecolor="#059292" uuid="69cb3313-df5a-471c-ad12-90a7194a7b89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Médico:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="66" height="20" uuid="c66d0ae2-55ca-41af-b1a6-11bcd464efdd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="0" width="54" height="20" uuid="eebb4b96-6aae-4ea5-82c9-e3cc5b41b59b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="1" width="64" height="20" uuid="ad322ac0-a4af-4720-9ce8-8af7da34f25d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TurnoMaximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="1" width="50" height="20" uuid="fdf76bbf-0ff1-4eaf-b20a-14eb3494bba5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="1" width="53" height="20" uuid="f0b511b8-ece9-410f-81d5-1b6234d3350a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{martes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="1" width="55" height="20" uuid="cd6bef07-aceb-407b-a7fc-c4534e28f460"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{miercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="1" width="67" height="20" uuid="d4676011-9010-466d-96dd-516d75259c64"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jueves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="55" height="20" uuid="e219655b-9f37-4bb6-9dc9-8bc19f3f5c02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{viernes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="727" y="0" width="72" height="20" uuid="326dccc4-b5b5-42bb-8198-1632c2c919e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="799" height="1" forecolor="#001F9F" uuid="eb0a2116-95ae-4d24-a547-f276276ce409"/>
+			</line>
+			<textField>
+				<reportElement x="465" y="0" width="128" height="20" uuid="045c1b9b-fe5d-405f-a19f-304dfe5d40f2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="593" y="1" width="134" height="20" uuid="a2b1b5a8-8bc4-474d-abd1-e7c58acaecc9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidoPaciente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="71" splitType="Stretch">
+			<textField pattern="h.mm a">
+				<reportElement x="742" y="34" width="59" height="20" uuid="9b2de851-7d83-4f2d-82c1-46fe81928ce0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="665" y="34" width="77" height="20" uuid="01e299c4-3325-4677-a788-2fa68efd82c5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="565" y="34" width="100" height="20" forecolor="#059292" uuid="712c04b7-22c1-443c-897c-4d64207c632d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="0" width="77" height="34" uuid="923af546-15a3-45ce-a89e-f0be419a64f2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreResponsable}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="103" height="34" uuid="5f27175b-61a5-4b17-96bd-c868da1f98a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosResponsable}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="0" width="138" height="34" forecolor="#059292" uuid="f3fbc448-73f1-4371-af87-ad8d7ae3cf9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Responsable del Turno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="35" width="51" height="19" forecolor="#059292" uuid="8a13a3fd-c0ec-4f12-baa1-0781ffd7e131"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cargo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="35" width="85" height="19" uuid="3f5a88ba-866c-4038-9565-977da703b0f5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="141" y="35" width="70" height="19" forecolor="#059292" uuid="5cadcb64-41dd-4d55-ad8e-587790948364"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Área:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="211" y="35" width="70" height="19" uuid="1acd1dee-4ac6-4d6e-a94c-91cef4dec0e7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreArea}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
